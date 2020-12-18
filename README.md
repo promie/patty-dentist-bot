@@ -10,7 +10,7 @@ Patty of Dent+ is a chatbot that relies on a set of REST API based micro-service
 
 ### Dentist service
 
-Navigate to the **dentist** service folder, there is the Dockerfile. Please follow the below commands to get the service up and running.
+Navigate to the **dentist** service folder, there is the Dockerfile. Follow the below commands to get the service up and running.
 
 ```
 $ cd dentist
@@ -20,7 +20,7 @@ $ docker run -p 8000:8000 -t dentist:latest __init__.py
 
 ### Timeslot service
 
-Navigate to the **timeslot** service folder, there is a Dockerfile. Please follow the below commands to get the service up and running.
+Navigate to the **timeslot** service folder, there is a Dockerfile. Follow the below commands to get the service up and running.
 
 ```
 $ cd timeslot
@@ -29,7 +29,7 @@ $ docker run -p 4000:4000 -t timeslot:latest __init__.py
 ```
 
 ## Setting up Chatbot Service
-Navigate to the **chatbot** service folder. Please follow the below commands to get the service up and running.
+Navigate to the **chatbot** service folder. Follow the below commands to get the service up and running.
 
 ```
 $ cd chatbot
@@ -40,7 +40,7 @@ $ python3 __init__.py
 ```
 
 ## Setting up Frontend service
-Navigate to the **frontend** service folder. Please foolow the below commands to get the service up and running.
+Navigate to the **frontend** service folder. Follow the below commands to get the service up and running.
 
 ```
 $ cd frontend
@@ -52,8 +52,6 @@ $ npm run start
 
 Below are the swagger documents for dentists, timeslots and chatbot services. Note: the app/docker container has to be running prior to visiting these links.
 
-Dentist Service: 	http://127.0.0.1:8000/static/swagger-ui/index.html
-
-Timeslot Service: 	http://127.0.0.1:4000/static/swagger-ui/index.html
-
-Chatbot service:	http://127.0.0.1:5000/static/swagger-ui/index.html
+- [Dentist Service](http://127.0.0.1:8000/static/swagger-ui/index.html)
+- [Timeslot Service](http://127.0.0.1:4000/static/swagger-ui/index.html)
+- [Chatbot Service](http://127.0.0.1:5000/static/swagger-ui/index.html)
