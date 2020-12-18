@@ -1,0 +1,117 @@
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: 'Timeslot Service API'
+  description: 'an API use to manage timeslot for dental service'
+  contact:
+    name: 'Prompong Yutasane'
+    email: 'z5137192@ad.unsw.edu.au'
+  license:
+    name: 'Apache 2.0'
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+basePath: '/api/v1'
+tags:
+  - name: 'timeslots'
+    description: 'A portal to retrieve availability on the dentists timeslot in a service'
+schemes:
+  - 'https'
+consumes:
+  - 'application/json'
+produces:
+  - 'application/json'
+paths:
+  /dentists/{did}/timeslots:
+    get:
+      tags:
+        - 'timeslots'
+      summary: 'Get timeslot information for a specific dentist'
+      operationId: 'get_timeslot_by_dentist_id'
+      parameters:
+        - name: 'did'
+          in: 'path'
+          description: 'The id of a dentist e.g. Patrick'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'Successfully retrieved timeslot information by dentist id'
+          schema:
+            type: 'object'
+            properties:
+              id:
+                type: 'string'
+              times:
+                type: 'object'
+            example:
+              id: 'Patrick'
+              times:
+                {
+                  'Mon 9am-10am': 'available',
+                  'Mon 10am-11am': 'available',
+                  'Mon 11am-12pm': 'reserved',
+                  'Mon 12pm-1pm': 'reserved',
+                  'Mon 1pm-2pm': 'available',
+                  'Mon 2pm-3pm': 'reserved',
+                  'Mon 3pm-4pm': 'available',
+                  'Mon 4pm-5pm': 'available',
+                }
+        404:
+          description: 'Dentist ID not found'
+  /dentists/{did}/timeslots/{tid}/reserve:
+    put:
+      tags:
+        - 'timeslots'
+      summary: 'Reserve timeslot for a specific dentist'
+      operationId: 'reserve_timeslot_by_dentist_id'
+      parameters:
+        - name: 'did'
+          in: 'path'
+          description: 'The id of a dentist: eg. Patrick'
+          required: true
+          type: 'string'
+        - name: 'tid'
+          in: 'path'
+          description: 'The id of a timeslot: eg. Mon 10am-11am'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'Successfully made a reservation by dentist and timeslot id'
+          schema:
+            type: 'object'
+            properties:
+              message:
+                type: 'string'
+            example:
+              message: 'Your appointment with Patrick for Mon 9am-10am has been confirmed.'
+        404:
+          description: 'Dentist or Timeslot ID not found'
+  /dentists/{did}/timeslots/{tid}/cancel:
+    put:
+      tags:
+        - 'timeslots'
+      summary: 'Cancel timeslot for a specific dentist'
+      operationId: 'cancel_timeslot_by_dentist_id'
+      parameters:
+        - name: 'did'
+          in: 'path'
+          description: 'The id of a dentist: eg. Patrick'
+          required: true
+          type: 'string'
+        - name: 'tid'
+          in: 'path'
+          description: 'The id of a timeslot: eg. Mon 10am-11am'
+          required: true
+          type: 'string'
+      responses:
+        200:
+          description: 'Successfully cancelled a reservation by the dentist and timeslot id'
+          schema:
+            type: 'object'
+            properties:
+              message:
+                type: 'string'
+            example:
+              message: 'Your cancellation with Patrick for Mon 9am-10am has been confirmed.'
+        404:
+          description: 'Dentist or Timeslot ID not found'

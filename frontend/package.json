@@ -1,0 +1,14 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Conversational Chatbot",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "author": "Promie Yutasane",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

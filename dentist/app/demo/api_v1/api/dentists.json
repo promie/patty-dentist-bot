@@ -1,0 +1,47 @@
+{
+  "1": {
+    "name": "Stephen",
+    "location": "Chatswood",
+    "specialization": "Paediatric Dentistry"
+  },
+  "2": {
+    "name": "Matthew",
+    "location": "Marrickville",
+    "specialization": "Orthodontics"
+  },
+  "3": {
+    "name": "Patrick",
+    "location": "Arncliffe",
+    "specialization": "Oral Surgery"
+  },
+  "4": {
+    "name": "Patricia",
+    "location": "St Leonards",
+    "specialization": "Paediatric Dentistry"
+  },
+  "5": {
+    "name": "Ben",
+    "location": "Ashfield",
+    "specialization": "Orthodontics"
+  },
+  "6": {
+    "name": "Anna",
+    "location": "Strathfield",
+    "specialization": "Oral Surgery"
+  },
+  "7": {
+    "name": "June",
+    "location": "Moorebank",
+    "specialization": "Paediatric Dentistry"
+  },
+  "8": {
+    "name": "Nicholas",
+    "location": "Artarmon",
+    "specialization": "Orthodontics"
+  },
+  "9": {
+    "name": "Petladda",
+    "location": "Marrickville",
+    "specialization": "Oral Surgery"
+  }
+}

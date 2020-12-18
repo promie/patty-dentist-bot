@@ -1,0 +1,76 @@
+// Substitutions
+! sub i'm     = i am
+! sub i'd     = i would
+! sub i've    = i have
+! sub i'll    = i will
+! sub don't   = do not
+! sub isn't   = is not
+! sub you'd   = you would
+! sub you're  = you are
+! sub you've  = you have
+! sub you'll  = you will
+! sub what's  = what is
+! sub whats   = what is
+! sub what're = what are
+! sub what've = what have
+! sub what'll = what will
+! sub who's   = who is
+
++ *
+- Sorry, I don't understand what you are saying. Can you please ask asking in a different way?
+- I'm not sure how to reply to that.
+- Try asking your question a different way.
+
++ (hi*|hello*|greetings|howdy|hi|hello)
+- Hi here, welcome to Dent+. My name is Patty. You can find out all the information on the dentists, availability timeslot and make an appointment.
+
++ (how are you|how are you going|how is it going)
+- I'm good thanks!
+- Fine thanks!
+
++ (thanks|thank you|thx|awesome*|awesome|great)
+- You're very welcome
+- Happy to help out
+- Glad I could help
+- Anytime!
+
++ what are you doing
+- I am providing you useful information regarding Dent+
+
+// ASKING THE BOT TO MAKE REQUESTS
++ (show|display) list of [available] dentists
+- GET_ALL_DENTISTS
+
++ (can i please see|can you show me) [the list of] dentists
+- GET_ALL_DENTISTS
+
++ [can i please] get information for (anna|ben|june|matthew|nicholas|patricia|patrick|petladda|stephen)
+- GET_DENTIST_INFO
+
++ [can i please] get information for (anna|ben|june|matthew|nicholas|patricia|patrick|petladda|stephen)
+- GET_DENTIST_INFO
+
++ (display|show) (availability|timeslot) for (anna|ben|june|matthew|nicholas|patricia|patrick|petladda|stephen)
+- GET_TIMESLOTS
+
++ (display|show) (availability|timeslot) for (anna|ben|june|matthew|nicholas|patricia|patrick|petladda|stephen) for (monday|tuesday|wednesday|thursday|friday|saturday|sunday|mon|tue|wed|thur|fri|sat|sun)
+- GET_TIMESLOTS
+
++ (can you please|could you please) (display|show) the list of (appointments|bookings)
+- GET_APPOINTMENTS
+
++ (how to|how do i|can you please tell me how|please tell me how) to cancel
+- HOW_TO_CANCEL
+
++ (how to|how do i|can you please tell me how|please tell me how) [to] [reserve|booking|make a reservation|make a reservation]
+- MAKE_RESERVATION
+
+
+
+
+
+
+
+
+
+

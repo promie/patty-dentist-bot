@@ -1,0 +1,54 @@
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: 'Dental Service API'
+  description: 'an API use to manage dental service'
+  contact:
+    name: 'Prompong Yutasane'
+    email: 'z5137192@ad.unsw.edu.au'
+  license:
+    name: 'Apache 2.0'
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+basePath: '/api/v1'
+tags:
+  - name: 'dentists'
+    description: 'A portal to retrieve information on dentists in a service'
+schemes:
+  - 'https'
+consumes:
+  - 'application/json'
+produces:
+  - 'application/json'
+paths:
+  /dentists:
+    get:
+      tags:
+        - 'dentists'
+      summary: 'Get all dentists'
+      operationId: 'get_all_dentists'
+      produces:
+        - 'application/json'
+      responses:
+        200:
+          description: 'Successfully retrived all dentists information'
+          schema:
+            $ref: '#/definitions/Dentists'
+definitions:
+  Dentists:
+    type: 'object'
+    properties:
+      id:
+        type: 'integer'
+        format: 'int64'
+      name:
+        type: 'string'
+      location:
+        type: 'string'
+      specialization:
+        type: 'string'
+
+    example:
+      id: 1
+      name: 'Promie'
+      location: 'Marrickville'
+      specialization: 'Paediatric Dentistry'

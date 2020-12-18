@@ -1,0 +1,44 @@
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: 'Dental Bot'
+  description: 'A simple chatbot for managing dental services'
+  contact:
+    name: 'Prompong Yutasane'
+    email: 'z5137192@ad.unsw.edu.au'
+  license:
+    name: 'Apache 2.0'
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+basePath: '/api/v1'
+tags:
+  - name: 'queries'
+    description: 'A portal to retrieve information on dental services'
+schemes:
+  - 'https'
+consumes:
+  - 'application/json'
+produces:
+  - 'application/json'
+paths:
+  /ask:
+    get:
+      tags:
+        - 'queries'
+      summary: get infromation on dental services such as the list of available dentists and timeslots
+      description: This endpoint takes a query parameter named 'expression ' and returns a json object with 'answer' as key.
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: expression
+          description: Show me the list of all dentists?
+          required: true
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: object
+            properties:
+              answer:
+                type: string
