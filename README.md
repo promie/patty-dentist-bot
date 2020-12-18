@@ -55,3 +55,8 @@ Below are the swagger documents for dentists, timeslots and chatbot services. No
 - [Dentist Service](http://127.0.0.1:8000/static/swagger-ui/index.html)
 - [Timeslot Service](http://127.0.0.1:4000/static/swagger-ui/index.html)
 - [Chatbot Service](http://127.0.0.1:5000/static/swagger-ui/index.html)
+
+## App Preview
+
+![Preview #1](./assets/preview1.jpg)
+![Preview #2](./assets/preview2.jpg)
